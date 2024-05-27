@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Pendaftaran</title>
+    <link rel="stylesheet" href="css/regist.css">
+</head>
+<body>
+    <h1>Daftar Akun Baru</h1>
+    <form id="registerForm">
+        <label for="username">Nama:</label>
+        <input type="text" id="username" required><br>
+
+        <label for="npm">NPM:</label>
+        <input type="text" id="npm" required><br>
+
+        <label for="email">Email:</label> <!-- Tambahkan ini -->
+        <input type="email" id="email" required><br> <!-- Pastikan tipe input adalah 'email' -->
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br>
+
+        <label for="verifyPassword">Verifikasi Password:</label>
+        <input type="password" id="verifyPassword" required><br>
+
+        <button type="submit">Daftar</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
+    <script type="module" src="js/register.js"></script>
+</body>
+</html>

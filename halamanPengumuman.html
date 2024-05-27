@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pengumuman</title>
+    <link rel="stylesheet" href="css/halamanPengumuman.css"> <!-- Sesuaikan path ke file CSS Anda -->
+</head>
+
+<body>
+
+
+
+    <div id="navbar-placeholder"></div>
+    <!-- Navbar Anda di sini -->
+    </div>
+    <div class="announcementsContainer">
+        <!-- Kontainer untuk menampilkan pengumuman -->
+    </div>
+
+    <!-- Modal untuk Edit dan Delete Pengumuman -->
+    <div id="editModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Pengumuman</h2>
+            <label for="subject">Subjek:</label>
+            <input type="text" id="subject" name="subject">
+            <label for="description">Deskripsi:</label>
+            <textarea id="description"></textarea>
+            <label for="date">Tanggal:</label>
+            <input type="date" id="date" name="date">
+            <button id="saveBtn">Simpan</button>
+            <button id="deleteBtn">Hapus</button>
+        </div>
+    </div>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
+    <script type="module" src="js/firebase/firebaseConfig.js"></script>
+    <!-- Sesuaikan path ke konfigurasi Firebase Anda -->
+    <script type="module" src="js/halaman_pengumuman.js"></script>
+    <!-- Script untuk mengambil dan menampilkan pengumuman -->
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.23.0/dist/date-fns.min.js"></script>
+
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+
+</body>
+
+</html>
