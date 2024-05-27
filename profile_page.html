@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengguna</title>
+    <link rel="stylesheet" href="./css/profile_page.css">
+
+
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="profile-container">
+        <h1>Edit Profil</h1>
+        <form id="profileForm">
+            <label for="profileImage">Foto Profil:</label>
+            <input type="file" id="profileImage" name="profileImage">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="npm">NPM:</label>
+            <input type="text" id="npm" name="npm" required>
+
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required readonly>
+
+            <label for="divisi">Divisi:</label>
+            <input type="text" id="divisi" name="divisi" required>
+
+            <label for="jabatan">Jabatan:</label>
+            <input type="text" id="jabatan" name="jabatan" required>
+
+            <label for="jurusan">Jurusan:</label>
+            <input type="text" id="jurusan" name="jurusan" required>
+
+            <label for="angkatan">Angkatan:</label>
+            <input type="text" id="angkatan" name="angkatan" required>
+
+            <label for="anggota">Anggota:</label>
+            <input type="text" id="anggota" name="anggota" required readonly>
+
+            <button type="submit" id="saveChangesButton">Simpan Perubahan</button>
+        </form>
+
+
+    </div>
+    <script type="module" src="./js/firebase/firebaseConfig.js"></script>
+    <script type="module" src="./js/profilePage_event.js"></script>
+
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html <div id="navbar-placeholder"></div>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+
+</body>
+
+</html>

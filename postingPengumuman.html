@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Pengumuman</title>
+    <link rel="stylesheet" href="./css/pengumumanPosting.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="form-container">
+        <h1>Tambah Pengumuman</h1>
+        <div id="statusMessage"></div>
+        <form id="announcementForm">
+            <label for="subject">Perihal:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="description">Deskripsi:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <button type="submit">Kirim Pengumuman</button>
+        </form>
+    </div>
+    <script type="module" src="js/firebase/firebaseConfig.js"></script>
+    <script type="module" src="js/postingPengumuman-event.js"></script>
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html <div id="navbar-placeholder"></div>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Program Kerja</title>
+    <link rel="stylesheet" href="css/programKerja.css"> <!-- Pastikan path ke file CSS benar -->
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Navbar Anda di sini -->
+        <div id="navbar-placeholder"></div>
+    </div>
+    <div class="programsContainer">
+        <!-- Kontainer untuk menampilkan program kerja -->
+    </div>
+    <!-- Modal untuk Edit dan Delete Program Kerja -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editForm">
+                <label for="name">Nama Program:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date">Tanggal Acara:</label>
+                <input type="datetime-local" id="date" name="date" required>
+
+                <label for="description">Deskripsi:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="button" id="saveBtn">Simpan Perubahan</button>
+                <button type="button" id="deleteBtn">Hapus Program</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js"></script>
+    <script type="module" src="js/firebase/firebaseConfig.js"></script>
+    <!-- Sesuaikan path ke konfigurasi Firebase Anda -->
+    <script type="module" src="js/ProgramKerja-event.js"></script>
+    <!-- Script untuk mengambil dan menampilkan program kerja -->
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+
+
+</body>
+
+</html>

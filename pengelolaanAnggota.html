@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <div id="navbar-placeholder"></div>
+    <title>Pengelolaan Anggota</title>
+    <link rel="stylesheet" type="text/css" href="./css/pengelolaanAnggota.css">
+</head>
+<body>
+
+    <h1>Pengelolaan Anggota</h1>
+    <div id="anggotaList"></div>
+    <div id="popup" class="popup">
+        <div class="popup-header">
+            <h2>Edit Profil Anggota</h2>
+            <button id="closePopup">&times;</button>
+        </div>
+        <div id="popupContent">
+            <!-- Placeholder for content -->
+        </div>
+        <button id="saveButton">Simpan</button>
+        <button id="deleteButton">Hapus</button>
+    </div>
+    <script type="module" src="./js/pengelolaanAnggota-event.js"></script>
+    
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html     <div id="navbar-placeholder"></div>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+
+
+</body>
+</html>

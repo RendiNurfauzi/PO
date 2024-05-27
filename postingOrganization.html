@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Informasi Organisasi</title>
+    <link rel="stylesheet" href="./css/organizationPosting.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="form-container">
+        <h1>Edit Informasi Organisasi</h1>
+        <form id="organizationForm">
+            <label for="image">Gambar Organisasi:</label>
+            <input type="file" id="image" name="image" required>
+            <img id="organizationImage" class="organization-image" src="" alt="Gambar Organisasi">
+
+            <label for="name">Nama Organisasi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="faculty">Fakultas:</label>
+            <input type="text" id="faculty" name="faculty" required>
+
+            <label for="department">Jurusan:</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="year">Tahun Angkatan:</label>
+            <input type="text" id="year" name="year" required>
+
+            <button type="submit">Simpan Informasi</button>
+        </form>
+        <div class="member-info-container">
+            <h2>ANGGOTA</h2>
+            <p>Anggota organisasi: <span id="memberCount">10</span></p>
+            <p>Pendaftar organisasi: <span id="applicantCount">10</span></p>
+            <button id="manageApplicationsButton">Penerimaan Pendaftaran</button>
+            <button id="printMemberDataButton">Print Data Anggota</button>
+            <button id="printApplicantDataButton">Print Data Pendaftar</button>
+        </div>
+    </div>
+    <script type="module" src="js/firebase/firebaseConfig.js"></script>
+    <script type="module" src="js/postingOrganization-event.js"></script>
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html     <div id="navbar-placeholder"></div>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+</body>
+</html>

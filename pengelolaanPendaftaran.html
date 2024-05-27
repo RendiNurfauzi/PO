@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengelolaan Pendaftaran</title>
+    <link rel="stylesheet" type="text/css" href="./css/pengelolaanPendaftaran.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <style>
+    </style>
+
+    <h1>Pengelolaan Pendaftaran</h1>
+    <div id="pendaftaranList"></div>
+    <div id="popup" class="popup">
+        <div class="popup-header">
+            <h2>Edit Pendaftaran Anggota</h2>
+            <button id="closePopup">&times;</button>
+        </div>
+        <div id="popupContent">
+            <!-- Placeholder for content -->
+        </div>
+        <button id="acceptButton">Terima</button>
+        <button id="rejectButton">Tolak</button>
+    </div>
+    <script type="module" src="./js/pengelolaanPendaftaran-event.js"></script>
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+</body>
+</html>

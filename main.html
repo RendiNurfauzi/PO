@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
+
+</head>
+<div id="navbar-placeholder"></div>
+<body class="flex-column">
+    <div class="front-end navigationSection">
+            <div class="mainContent">
+                <div class="topSections">
+                    <div class="organizationSection">
+                        <h2 class="titleOrganisasi" id="editOrganization">ORGANISASI</h2>
+                        <div class="organizationBox">
+                            <div class="organizationDetails">
+                                <img class="organizationImage" src="" alt="Gambar Organisasi" />
+                                <div class="infoBlock">
+                                    <h3>Nama Organisasi:</h3>
+                                    <p class="organizationName">nama_organisasi</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>Fakultas:</h3>
+                                    <p class="organizationFakultas">fakultas</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>Jurusan:</h3>
+                                    <p class="organizationJurusan">jurusan</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>Tahun Angkatan:</h3>
+                                    <p class="organizationYear">tahun_angkatan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="membersSection">
+                        <h2 class="titleAnggota">Profil Pengguna</h2>
+                        <div class="membersBox">
+                            <div class="membersDetails">
+                                <img class="membersImage" src="" alt="Foto Profil" />
+                                <div class="infoBlock">
+                                    <h3>Nama:</h3>
+                                    <p class="membersName">Nama</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>NPM:</h3>
+                                    <p class="membersNPM">NPM</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>Divisi:</h3>
+                                    <p class="membersDivisi">Divisi</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>Jabatan:</h3>
+                                    <p class="membersJabatan">Jabatan</p>
+                                </div>
+                                <div class="infoBlock">
+                                    <h3>Angkatan:</h3>
+                                    <p class="membersAngkatan">Angkatan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomSections">
+                    <div class="announcementsSection">
+                        <h2 class="titlePengumuman">Pengumuman</h2>
+                        <div class="announcementsBox">
+                            <!-- Elemen pengumuman akan ditambahkan di sini oleh JavaScript -->
+                        </div>
+                    </div>
+                    <div class="workProgramSection">
+                        <h2 class="titleProgramKerja">Program Kerja</h2>
+                        <div class="programBox">
+                            <!-- Elemen program kerja akan ditambahkan di sini oleh JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="./js/firebase/firebaseConfig.js"></script>
+    <script type="module" src="./js/main-page-event.js"></script>
+
+    
+    <script>
+        // Fungsi untuk memuat navbar dari file navbar.html
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                const navbarPlaceholder = document.getElementById('navbar-placeholder');
+                navbarPlaceholder.innerHTML = html;
+                // Evaluasi skrip setelah memuat
+                Array.from(navbarPlaceholder.querySelectorAll("script")).forEach(oldScript => {
+                    const newScript = document.createElement("script");
+                    newScript.text = oldScript.text;
+                    document.body.appendChild(newScript).parentNode.removeChild(newScript);
+                });
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
+
+</body>
+
+</html>

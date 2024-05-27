@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" type="text/css" href="./css/LoginPage.css" />
+
+
+
+</head>
+
+<body class="flex-column">
+    <span id="followText">Hello!</span>
+    <div class="login-page loginSection">
+        <div class="flexCol">
+            <div class="heroContainer">
+                <h1 class="heroTitle">AZOZING</h1>
+                <h2 class="subTitle">Web Manajemen Organisasi</h2>
+                <h2 class="welcomeTitle">Selamat Datang</h2>
+            </div>
+            <div class="contentBox">
+                <div class="formContainer">
+                    <div class="emailContainer">
+                        <h2 class="emailTitle">EMAIL</h2>
+                        <textarea class="emailInput"></textarea>
+                    </div>
+                    <div class="passwordContainer">
+                        <h2 class="passwordTitle">PASSWORD</h2>
+                        <textarea class="passwordInput"></textarea>
+                    </div>
+                    <button class="loginButton">LOGIN</button>
+                    <h2 class="registerTitle">REGISTER</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDIfFuQd7wTixhhnZw4CihG-rOaL5fCIsE",
+            authDomain: "azozing-organisasi.firebaseapp.com",
+            projectId: "azozing-organisasi",
+            storageBucket: "azozing-organisasi.appspot.com",
+            messagingSenderId: "865618176927",
+            appId: "1:865618176927:web:7f90e6214dad632b0fabaa",
+            measurementId: "G-12EYF3XB82"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js"></script>
+
+
+    <script type="module" src="./js/login-page-event.js"></script>
+    <script type="text/javascript">
+        AOS.init();
+        new Sticky('.sticky-effect');
+    </script>
+</body>
+
+</html>
