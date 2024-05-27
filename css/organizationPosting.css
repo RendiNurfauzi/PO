@@ -1,0 +1,104 @@
+/* File: css/organizationPosting.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang lebih modern */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.form-container {
+    background: white;
+    max-width: 600px;
+    margin: 40px auto; /* Margin yang lebih besar */
+    padding: 40px; /* Padding yang lebih besar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Shadow yang lebih lembut */
+    border-radius: 10px; /* Border radius yang lebih besar */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 24px; /* Font size yang lebih besar */
+}
+
+label {
+    display: block;
+    margin-bottom: 15px; /* Margin yang lebih besar */
+    color: #444; /* Warna yang lebih gelap */
+    font-size: 16px; /* Font size yang lebih besar */
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px; /* Padding yang lebih besar */
+    margin-top: 10px; /* Margin atas yang lebih besar */
+    margin-bottom: 25px; /* Margin bawah yang lebih besar */
+    border: 1px solid #bbb; /* Warna border yang lebih lembut */
+    border-radius: 6px; /* Border radius yang lebih besar */
+}
+
+button {
+    width: 100%;
+    padding: 15px; /* Padding yang lebih besar */
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Border radius yang lebih besar */
+    cursor: pointer;
+    font-size: 18px; /* Font size yang lebih besar */
+    transition: background-color 0.3s; /* Transisi yang halus */
+}
+
+button:hover {
+    background-color: #4a54e1;
+}
+
+#statusMessage {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.organization-image {
+    display: block;
+    margin: 20px auto; /* Memberikan margin atas dan bawah serta memusatkan gambar */
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar container */
+    height: auto; /* Menjaga aspek rasio gambar */
+    border-radius: 8px; /* Memberikan border radius untuk estetika */
+}
+
+.member-info-container {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-info-container h2 {
+    color: #333;
+}
+
+.member-info-container p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.member-info-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.member-info-container button:hover {
+    background-color: #4a54e1;
+}

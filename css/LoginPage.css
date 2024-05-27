@@ -1,0 +1,104 @@
+/* Reset beberapa style dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, #3041ac 0%, #da08d7 100%);
+  background-size: 200% 200%;
+  transition: background-position 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.heroContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-size: 24px;
+  color: #333;
+}
+
+.subTitle, .welcomeTitle {
+  font-size: 18px;
+  color: #555;
+}
+
+.contentBox {
+  width: 100%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailContainer, .passwordContainer {
+  margin-bottom: 15px;
+}
+
+.emailTitle, .passwordTitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.emailInput, .passwordInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.loginButton {
+  background-color: #4518f8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #99007d;
+}
+
+.registerTitle {
+  text-align: center;
+  color: #0066cc;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.registerTitle:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+#welcomeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

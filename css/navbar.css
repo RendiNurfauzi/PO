@@ -1,0 +1,76 @@
+/* Style untuk Navbar */
+.front-end .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111; /* Warna latar belakang navbar */
+    z-index: 1000; /* Pastikan navbar selalu di atas elemen lain */
+    display: flex;
+    justify-content: space-between; /* Menyelaraskan item navbar */
+    padding: 0 20px; /* Padding di kiri dan kanan */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Bayangan untuk navbar */
+}
+
+.front-end .navbar .logo {
+    font-size: 24px; /* Ukuran font logo */
+    color: white; /* Warna teks logo */
+    padding: 10px 0; /* Padding atas dan bawah */
+}
+
+.front-end .navbar .menuItems {
+    display: flex;
+    align-items: center; /* Vertikal menyelaraskan item menu */
+}
+
+.front-end .navbar .menuItemHome {
+    padding: 10px 15px; /* Padding di sekitar item menu */
+    color: white; /* Warna teks item menu */
+    text-decoration: none; /* Hapus garis bawah */
+    font-size: 18px; /* Ukuran font item menu */
+    transition: color 0.3s; /* Transisi warna saat di-hover */
+}
+
+.front-end .navbar .menuItemHome:hover,
+.front-end .navbar .menuItemHome.active {
+    color: #4333ae; /* Warna teks saat di-hover atau aktif */
+}
+
+/* Responsivitas untuk Navbar pada layar kecil */
+@media (max-width: 767px) {
+    .front-end .navbar .menuItems {
+        display: none; /* Sembunyikan item menu pada layar kecil */
+    }
+
+    .front-end .hamburger-menu {
+        display: flex; /* Tampilkan hamburger menu pada layar kecil */
+    }
+}
+
+/* Style untuk Hamburger Menu */
+.front-end .hamburger-menu {
+    display: none; /* Secara default, hamburger menu tidak ditampilkan */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px 0; /* Padding atas dan bawah */
+}
+
+.front-end .hamburger-menu .bar {
+    width: 30px; /* Lebar bar */
+    height: 3px; /* Tinggi bar */
+    background-color: white; /* Warna bar */
+    margin: 5px 0; /* Jarak antar bar */
+    transition: transform 0.3s; /* Transisi untuk animasi transform */
+}
+
+/* Animasi transform untuk Hamburger Menu saat aktif */
+.front-end .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.front-end .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.front-end .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}

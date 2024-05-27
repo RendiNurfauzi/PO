@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.announcementsContainer {
+    margin: 20px auto; /* Tengahkan container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 800px; /* Batasi lebar maksimal container */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Tambahkan shadow untuk kedalaman */
+}
+
+.announcementDetails {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none; /* Hapus border */
+    border-radius: 8px; /* Membuat border lebih bulat */
+    background-color: #ffffff; /* Warna latar belakang putih */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Tambahkan shadow untuk kedalaman */
+    transition: transform 0.3s ease-in-out; /* Animasi saat hover */
+}
+
+.announcementDetails:hover {
+    transform: translateY(-5px); /* Efek hover naik */
+}
+
+.announcementInfo {
+    margin-bottom: 12px;
+    line-height: 1.4; /* Tingkatkan line-height untuk keterbacaan */
+}
+
+.announcementSubject {
+    font-size: 1.8em; /* Perbesar ukuran font */
+    color: #333;
+    font-weight: bold; /* Tambahkan bold pada judul */
+}
+
+.announcementDate {
+    font-size: 1em;
+    color: #666;
+    font-style: italic; /* Tambahkan gaya italic pada tanggal */
+}
+
+.announcementRect {
+    width: 95%;
+    height: 120px; /* Tingkatkan tinggi */
+    padding: 12px; /* Tambahkan padding */
+    border: 1px solid #ddd; /* Warna border lebih terang */
+    border-radius: 8px; /* Membuat border lebih bulat */
+    resize: none; /* Nonaktifkan resize */
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Tambahkan shadow di dalam */
+    font-family: 'Arial', sans-serif; /* Pastikan font konsisten */
+    color: #333; /* Warna teks */
+}
+
+/* CSS untuk Modal */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Pastikan modal selalu di atas konten lain */
+}
+
+.modal-content {
+    position: absolute; /* Ubah atau pastikan menggunakan position absolute */
+    top: 50%; /* Atur top ke 50% dari viewport */
+    left: 50%; /* Atur left ke 50% dari viewport */
+    transform: translate(-50%, -50%); /* Gunakan transform untuk mengatur posisi tepat di tengah */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Atur lebar modal */
+    max-width: 600px; /* Maksimum lebar modal */
+    animation: modalOpen 0.3s ease;
+}
+
+/* Animasi untuk membuka modal */
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Style untuk label dan input di dalam modal */
+.modal-content label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Mengatur box-sizing untuk menghindari masalah padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style untuk tombol */
+.modal-content button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}

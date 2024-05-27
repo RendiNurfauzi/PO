@@ -1,0 +1,272 @@
+/* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ubah dari center ke flex-start */
+    padding-top: 50px;
+    background: linear-gradient(90deg, #ff0000 0%, #4264b8 100%);
+    background-size: 200% 200%;
+    transition: background-position 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.flexColLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.front-end {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.navigationSection {
+    margin-bottom: 20px;
+}
+
+.contentBox {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+}
+
+.menuItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.menuItemHome {
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menuItemHome:hover {
+    background-color: #0056b3;
+}
+
+.loginInfo {
+    margin-left: auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0056b3;
+}
+
+/* Gaya untuk Bagian Utama */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.topSections, .bottomSections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Gaya untuk Kotak Organisasi dan Anggota */
+.organizationSection, .membersSection {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    width: 48%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Tambahkan transisi untuk efek animasi yang halus */
+}
+
+.organizationSection:hover, .membersSection:hover {
+    background-color: #dfe4ea; /* Ubah warna latar belakang saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Tingkatkan bayangan untuk efek "lift" */
+    transform: translateY(-5px); /* Sedikit angkat kotak */
+}
+
+.organizationDetails, .membersDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memusatkan elemen secara horizontal */
+    gap: 10px;
+    text-align: center; /* Memusatkan teks */
+}
+
+.organizationImage, .membersImage {
+    width: 200px; /* Tetapkan lebar tetap */
+    height: 200px; /* Tetapkan tinggi tetap */
+    object-fit: cover; /* Pastikan gambar menutupi seluruh area kotak */
+    border-radius: 5%; /* Membuat gambar menjadi lingkaran */
+}
+
+.organizationName, .organizationFakultas, .organizationJurusan, .organizationYear, .membersCount {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0; /* Memberikan sedikit ruang antar teks */
+}
+
+/* Gaya untuk Kotak Pengumuman dan Program Kerja */
+.announcementsSection, .workProgramSection {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    width: 48%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Tambahkan transisi untuk efek animasi yang halus */
+}
+
+.announcementsSection:hover, .workProgramSection:hover {
+    background-color: #dfe4ea; /* Ubah warna latar belakang saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Tingkatkan bayangan untuk efek "lift" */
+    transform: translateY(-5px); /* Sedikit angkat kotak */
+}
+
+.announcementsBox, .programBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcementDetails, .programDetails {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.announcementInfo, .programInfo {
+    margin-bottom: 10px;
+}
+
+.announcementSubject, .programName {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.announcementDate, .programDate {
+    font-size: 1em;
+    color: #555;
+}
+
+.announcementRect, .programRect {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .flexRow {
+        flex-direction: column;
+    }
+
+    .menuItems {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .topSections, .bottomSections {
+        flex-direction: column;
+    }
+
+    .organizationSection, .membersSection, .announcementsSection, .workProgramSection {
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .organizationImage, .membersImage {
+        width: 150px; /* Lebar yang lebih kecil untuk gambar */
+        height: 150px; /* Tinggi yang lebih kecil untuk gambar */
+    }
+
+    .organizationDetails, .membersDetails {
+        padding: 10px; /* Padding untuk detail */
+    }
+}
+.titleOrganisasi, .titleAnggota, .titlePengumuman, .titleProgramKerja {
+    text-align: center; /* Memusatkan teks judul */
+    width: 100%; /* Memastikan judul memenuhi lebar kontainer */
+    font-size: 1.5em; /* Menyesuaikan ukuran font judul */
+    font-weight: bold; /* Membuat teks judul tebal */
+    margin-bottom: 10px; /* Menambahkan margin bawah untuk memberi ruang antara judul dan konten di bawahnya */
+}
+
+.infoBlock {
+    margin-bottom: 5px; /* Kurangi margin bawah */
+}
+
+.infoBlock h3, .infoBlock p {
+    margin: 0; /* Hapus margin default */
+    padding: 2px 0; /* Tambahkan padding kecil untuk pemisahan visual */
+}
+
+.infoBlock p {
+    font-size: 1.2em; /* Ukuran font untuk nilai */
+    color: #555; /* Warna teks untuk nilai */
+}

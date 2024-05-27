@@ -1,0 +1,647 @@
+.front-end.navigationSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #111111;
+  overflow: hidden;
+}
+.front-end .flexCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px 0px;
+  margin: 9px auto 38px;
+  width: 96.64%;
+  max-width: 1237px;
+}
+.front-end .contentBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #262626;
+  border-radius: 10px 10px 10px 10px;
+}
+@media (max-width: 575px) {
+  .front-end .contentBox {
+    display: flex;
+  }
+}
+.front-end .flexRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 10px;
+  margin: 13px 34px 7px 27px;
+}
+@media (max-width: 991px) {
+  .front-end .flexRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+    margin: 13px 32px 7px 27px;
+  }
+}
+@media (max-width: 575px) {
+  .front-end .flexRow {
+    margin: 13px 16px 7px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .flexRow {
+    margin: 13px auto 7px;
+  }
+}
+.front-end .menuItems {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 10px;
+  width: 710px;
+  min-width: 0px;
+}
+@media (max-width: 991px) {
+  .front-end .menuItems {
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 100%;
+    min-width: unset;
+  }
+}
+@media (max-width: 767px) {
+  .front-end .menuItems {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+.front-end .menuItemHome {
+  position: relative;
+  display: flex;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+  white-space: nowrap; /* Mencegah teks dari pembungkusan ke baris baru */
+}
+
+
+
+@media (max-width: 991px) {
+  .front-end .menuItemHome {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .front-end .menuItemHome {
+    justify-content: center;
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .menuItemHome {
+    font-size: 20px;
+  }
+}
+.front-end .mainContent {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 10px;
+  width: 99.27%;
+}
+@media (max-width: 767px) {
+  .front-end .mainContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+.front-end .flexColLeft {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 52px 0px;
+  width: 375px;
+  min-width: 0px;
+}
+@media (max-width: 767px) {
+  .front-end .flexColLeft {
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 100%;
+    min-width: unset;
+  }
+}
+@media (max-width: 383px) {
+  .front-end .flexColLeft {
+    gap: 50px 0px;
+  }
+}
+.front-end .organizationSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+}
+.front-end .titleOrganisasi {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .titleOrganisasi {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .titleOrganisasi {
+    font-size: 20px;
+  }
+}
+.front-end .organizationBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #262626;
+  border-radius: 10px 10px 10px 10px;
+}
+.front-end .organizationDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 11px auto 7px;
+  width: 176px;
+  max-width: 85%;
+}
+.front-end .organizationImage {
+  position: relative;
+  width: 100px;
+  max-width: 85%;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.front-end .organizationName {
+  position: relative;
+  margin: 7px 0px 0px;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .organizationName {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .organizationName {
+    font-size: 20px;
+  }
+}
+.front-end .organizationFakultas {
+  position: relative;
+  margin: 1px 0px 0px;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .organizationFakultas {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .organizationFakultas {
+    font-size: 20px;
+  }
+}
+.front-end .organizationJurusan {
+  position: relative;
+  margin: 2px 0px 0px;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .organizationJurusan {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .organizationJurusan {
+    font-size: 20px;
+  }
+}
+.front-end .organizationYear {
+  position: relative;
+  margin: 2px 0px 0px;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .organizationYear {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .organizationYear {
+    font-size: 20px;
+  }
+}
+.front-end .membersSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+}
+.front-end .titleAnggota {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .titleAnggota {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .titleAnggota {
+    font-size: 20px;
+  }
+}
+.front-end .membersBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #262626;
+  border-radius: 10px 10px 10px 10px;
+}
+.front-end .membersDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px 0px;
+  margin: 11px auto 80px;
+  width: 168px;
+  max-width: 85%;
+}
+@media (max-width: 383px) {
+  .front-end .membersDetails {
+    gap: 50px 0px;
+    margin: 11px auto 50px;
+  }
+}
+.front-end .membersImage {
+  position: relative;
+  width: 100px;
+  max-width: 85%;
+  height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.front-end .membersCount {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .membersCount {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .membersCount {
+    font-size: 20px;
+  }
+}
+.front-end .announcementsSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+  width: 375px;
+  min-width: 0px;
+}
+@media (max-width: 767px) {
+  .front-end .announcementsSection {
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 100%;
+    min-width: unset;
+  }
+}
+.front-end .titlePengumuman {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .titlePengumuman {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .titlePengumuman {
+    font-size: 20px;
+  }
+}
+.front-end .announcementsBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  border-radius: 10px 10px 10px 10px;
+}
+@media (max-width: 991px) {
+  .front-end .announcementsBox {
+    height: 100%%;
+    height: auto;
+  }
+}
+.front-end .announcementDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px 0px;
+  margin: 11px 12px 12px;
+}
+@media (max-width: 991px) {
+  .front-end .announcementDetails {
+    margin: 11px 12px 150px;
+  }
+}
+@media (max-width: 575px) {
+  .front-end .announcementDetails {
+    margin: 11px 12px 80px;
+  }
+}
+@media (max-width: 383px) {
+  .front-end .announcementDetails {
+    margin: 11px 8px 50px;
+  }
+}
+.front-end .announcementInfo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 10px;
+  margin: 0px 0px 0px 2px;
+}
+@media (max-width: 383px) {
+  .front-end .announcementInfo {
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+  }
+}
+.front-end .announcementSubject {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .announcementSubject {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .announcementSubject {
+    font-size: 20px;
+  }
+}
+.front-end .announcementDate {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .announcementDate {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .announcementDate {
+    font-size: 20px;
+  }
+}
+.front-end .announcementRect {
+  position: relative;
+  min-height: 51px;
+  background-color: #d9d9d9;
+  border-radius: 5px 5px 5px 5px;
+}
+.front-end .workProgramSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+  width: 375px;
+  min-width: 0px;
+}
+@media (max-width: 767px) {
+  .front-end .workProgramSection {
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 100%;
+    min-width: unset;
+  }
+}
+.front-end .titleProgramKerja {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .titleProgramKerja {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .titleProgramKerja {
+    font-size: 20px;
+  }
+}
+.front-end .programBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  border-radius: 10px 10px 10px 10px;
+}
+@media (max-width: 991px) {
+  .front-end .programBox {
+    height: 100%;
+  }
+}
+.front-end .programDetails {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px 0px;
+  margin: 11px 12px 12px;
+}
+@media (max-width: 991px) {
+  .front-end .programDetails {
+    margin: 11px 12px 150px;
+  }
+}
+@media (max-width: 575px) {
+  .front-end .programDetails {
+    margin: 11px 12px 80px;
+  }
+}
+@media (max-width: 383px) {
+  .front-end .programDetails {
+    margin: 11px 8px 50px;
+  }
+}
+.front-end .programInfo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 10px;
+  margin: 0px 0px 0px 2px;
+}
+@media (max-width: 383px) {
+  .front-end .programInfo {
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+  }
+}
+.front-end .programName {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .programName {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .programName {
+    font-size: 20px;
+  }
+}
+.front-end .programDate {
+  position: relative;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: white;
+}
+@media (max-width: 991px) {
+  .front-end .programDate {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .front-end .programDate {
+    font-size: 20px;
+  }
+}
+.front-end .programRect {
+  position: relative;
+  min-height: 51px;
+  background-color: #d9d9d9;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.front-end .hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.front-end .hamburger-menu .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 575px) {
+  .front-end .hamburger-menu {
+    display: flex;
+  }
+  
+  .front-end .menuItems {
+    display: none;
+    opacity: 0; /* Start with hidden */
+    transition: opacity 1s ease, display 0s ease 1s; /* Smooth opacity transition */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+.loginInfo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font: 400 24px/1.62 "Karma", Helvetica, Arial, serif;
+  color: rgb(45, 61, 154);
+  white-space: nowrap; /* Mencegah teks dari pembungkusan ke baris baru */
+  margin-left: 30%;
+  text-overflow: ellipsis; /* Tambahkan ellipsis jika teks terpotong */
+  max-width: 60%; /* Atur lebar maksimal dari teks yang ditampilkan */
+}
+
+@media (max-width: 575px) {
+  .loginInfo {
+    margin-left: 0%;
+  }
+}
+
+.front-end .titleOrganisasi:hover,
+.front-end .titleAnggota:hover,
+.front-end .titlePengumuman:hover,
+.front-end .titleProgramKerja:hover,
+.front-end .menuItemHome:hover {
+  color: #4333ae; /* Mengubah warna teks saat dihover */
+  transform: scale(1.05); /* Membesarkan teks saat dihover */
+}

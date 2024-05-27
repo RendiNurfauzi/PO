@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.profile-container {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan konten secara vertikal */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile-image-container {
+    width: 200px; /* Ukuran tetap */
+    height: 200px; /* Ukuran tetap */
+    overflow: hidden; /* Sembunyikan bagian gambar yang berlebih */
+    display: flex; /* Flexbox untuk pusatkan gambar */
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+    border-radius: 5%; /* Bulatkan gambar */
+    margin-bottom: 20px; /* Jarak dengan elemen berikutnya */
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar menutupi seluruh area tanpa distorsi */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Transisi yang halus */
+}
+
+button:hover {
+    background-color: #4a54e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan saat hover */
+}
+
